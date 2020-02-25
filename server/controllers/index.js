@@ -1,7 +1,23 @@
 const models = require('../models');
+// const redis = require('redis');
+
+// const client = redis.createClient(6379);
 
 module.exports = {
   gallery: {
+    cache: (req, res, next) => {
+      const id = req.params.id;
+      client.get(id, (err, data) => {
+        if (err) {
+          console.log(err);
+        }
+        if(data) {
+          res.send(JSON.parse(data));
+        } else {
+          next();
+        }
+      })
+    },
 
     getOne: (req, res) => {
       const id = req.params.id;
@@ -17,11 +33,12 @@ module.exports = {
           for (var i = 0; i < results.length; i++) {
             var newObj = {};
             newObj["id"] = results[i]["id"];
-            newObj["url"] =  results[i]["url"];
+            newObj["url"] = results[i]["url"];
             newObj["caption"] = results[i]["caption"];
             reformattedObj["listing_images"].push(newObj);
           }
           res.json([reformattedObj]);
+          client.setex(id, 200, JSON.stringify([reformattedObj]));
         }
       });
     },

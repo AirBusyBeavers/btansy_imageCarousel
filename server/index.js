@@ -1,3 +1,4 @@
+const nr = require('newrelic');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const express = require('express');
@@ -7,7 +8,7 @@ const port = 3000;
 const controllers = require('./controllers');
 const cors = require('cors');
 
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
@@ -15,6 +16,8 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get('/gallery/:id', controllers.gallery.getOne);
+
+// app.get('/gallery/:id', controllers.gallery.cache, controllers.gallery.getOne);
 
 app.get('/galleries', controllers.gallery.getAll);
 
