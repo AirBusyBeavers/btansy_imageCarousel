@@ -12,6 +12,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/*
 //GET image gallery ID
 export default function() {
   var randomQuery = getRandomInt(0,9);
@@ -28,8 +29,8 @@ export default function() {
   });
   sleep(0.001);
 };
+*/
 
-/*
 //GET component
 export default function() {
   let res = http.get(`http://localhost:3000/`);
@@ -39,7 +40,6 @@ export default function() {
   });
   sleep(0.001);
 };
-*/
 
 /*
 //POST
