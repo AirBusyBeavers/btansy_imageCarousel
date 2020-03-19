@@ -220,11 +220,11 @@ Alternatively, if you want to use Postgres (SQL):
 ![Schema Image](https://user-images.githubusercontent.com/56744348/74473709-ebe58e80-4e58-11ea-8c61-eff16c58fcd1.png)
 
 Listing Table:
--listing_id INTEGER PRIMARY KEY
--listing_title TEXT
+* listing_id INTEGER PRIMARY KEY
+* listing_title TEXT
 
 Images Table:
--id INTEGER
--url TEXT
--caption TEXT
--listing_id INTEGER INTEGER REFERENCES sql_listings(listing_id)
+* id INTEGER
+* url TEXT
+* caption TEXT
+* listing_id INTEGER INTEGER REFERENCES sql_listings(listing_id)
