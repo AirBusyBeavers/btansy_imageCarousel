@@ -194,7 +194,7 @@ Curl -X DELETE 'http://localhost:3000/gallery/21'
 
 # Database Schemas
 
-CASSANDRA:
+Cassandra (NoSQL):
 
 -Sample output:
 ```json
@@ -215,7 +215,7 @@ CASSANDRA:
 	]
 }
 ```
-Alternatively, if you want to use Postgres:
+Alternatively, if you want to use Postgres (SQL):
 
 ![Schema Image](https://user-images.githubusercontent.com/56744348/74473709-ebe58e80-4e58-11ea-8c61-eff16c58fcd1.png)
 
