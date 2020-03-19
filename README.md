@@ -4,11 +4,11 @@ Hospitality marketplace providing alternative housing for travelers.
 
 ![](top_carousel.png)
 
-# Getting started:
+# Getting started
 
 Prerequisites: Node 6 or above, and Cassandra
 
-# Installation:
+# Installation
 
 ```sh
 npm install
@@ -25,6 +25,19 @@ node seeding.js
 ```
 
 Then open [http://localhost:3000/](http://localhost:3000/) to see the component.<br>
+
+## Built With
+
+* React 16
+* Webpack 4
+* Babel 7
+* Node.js
+* Express
+* Cassandra
+* nginx
+* New Relic
+* Loader.io
+* k6
 
 # CRUD API
 
@@ -181,20 +194,6 @@ Curl -X DELETE 'http://localhost:3000/gallery/21'
 
 # Database Schemas
 
-POSTGRESQL:
-
-![Schema Image](https://user-images.githubusercontent.com/56744348/74473709-ebe58e80-4e58-11ea-8c61-eff16c58fcd1.png)
-
-Listing Table:
--listing_id INTEGER PRIMARY KEY
--listing_title TEXT
-
-Images Table:
--id INTEGER
--url TEXT
--caption TEXT
--listing_id INTEGER INTEGER REFERENCES sql_listings(listing_id)
-
 CASSANDRA:
 
 -Sample output:
@@ -216,3 +215,16 @@ CASSANDRA:
 	]
 }
 ```
+Alternatively, if you want to use Postgres:
+
+![Schema Image](https://user-images.githubusercontent.com/56744348/74473709-ebe58e80-4e58-11ea-8c61-eff16c58fcd1.png)
+
+Listing Table:
+-listing_id INTEGER PRIMARY KEY
+-listing_title TEXT
+
+Images Table:
+-id INTEGER
+-url TEXT
+-caption TEXT
+-listing_id INTEGER INTEGER REFERENCES sql_listings(listing_id)
