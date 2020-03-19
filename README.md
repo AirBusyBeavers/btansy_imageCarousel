@@ -196,7 +196,7 @@ Curl -X DELETE 'http://localhost:3000/gallery/21'
 
 Cassandra (NoSQL):
 
--Sample output:
+Sample output:
 ```json
 {
 	"listing_id" : 21,
