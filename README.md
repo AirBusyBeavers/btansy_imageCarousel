@@ -2,6 +2,8 @@
 
 Hospitality marketplace providing alternative housing for travelers. 
 
+[]!(top_carousel.png)
+
 # Getting started:
 
 Prerequisites: Node 6 or above, and Cassandra
