@@ -2,7 +2,7 @@
 
 Hospitality marketplace providing alternative housing for travelers. 
 
-[]!(top_carousel.png)
+![](top_carousel.png)
 
 # Getting started:
 
