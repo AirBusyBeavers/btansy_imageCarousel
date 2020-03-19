@@ -1,8 +1,28 @@
-# Getting start with the image carousel:
+# Image Carousel
 
-1) npm run seed
-2) npm run build
-3) npm run start
+Hospitality marketplace providing alternative housing for travelers. 
+
+# Getting started:
+
+Prerequisites: Node 6 or above, and Cassandra
+
+# Installation:
+
+```sh
+npm install
+```
+
+```sh
+npm run build
+npm start
+```
+To generate 10M data points, go to remi_imageCarousel/server/db directory: 
+
+```sh
+node seeding.js
+```
+
+Then open [http://localhost:3000/](http://localhost:3000/) to see the component.<br>
 
 # CRUD API
 
